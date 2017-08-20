@@ -4,25 +4,42 @@
 {% block head_title %} Welcome | {{ block.super }} {% endblock %}
 
 {% block jumbotron_content %}
-
-        <h1>Navbar example</h1>
-        <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-        <p>To see the difference between static and fixed top navbars, just scroll.</p>
+<div class="row">
+  <div class="col-sm-6">
+        <h1>Try Django 1.8</h1>
+        <p>This is the home of the MPV Landing page.</p>
         <p>
-          <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
+          <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">Join Us</a>
         </p>
-
+  </div>
+  <div class="col-sm-6" style="background-color:black;height:300px;">
+    
+  </div>
+</div>
 {% endblock %}
 	
 {% block content %}
-<h3> {{ title }} </h3>
+
 <div class="row">
-  <div class="col-sm-6 col-md-3">
- 
-<form method='POST' action=''>{% csrf_token %}
-{{ form|crispy }}
-<input type='submit' value='Sign Up'>
-</form>
-</div>
+  <div class="col-sm-3 pull-right">
+    <a class="lead">{{ title }}</a>
+    <form method='POST' action=''>{% csrf_token %}
+      {{ form|crispy }}
+      <input type='submit' value='Sign Up'>
+    </form>
+  </div>
+
+
+  <div class="col-sm-3">
+    <a class="lead">Built with Django and Bootstrap</a>
+  </div>
+  
+  <div class="col-sm-3">
+    <a class="lead">Created for starters of all kinds.</a>
+  </div>
+  
+  <div class="col-sm-3">
+    <a class="lead">Always open source.</a>
+  </div>
 </div>
 {% endblock %}
