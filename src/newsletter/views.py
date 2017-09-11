@@ -25,6 +25,7 @@ def home(request):
     return render(request, "home.html", context)
 
 def contact(request):
+    title = 'Contact Us'
     form = ContactForm(request.POST or None)
     if form.is_valid():
         #for key in form.cleaned_data:
@@ -55,5 +56,6 @@ def contact(request):
         
     context = {
         'form': form,
+        'title': title,
     }
     return render(request, "contact.html", context)
