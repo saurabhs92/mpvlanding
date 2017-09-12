@@ -45,14 +45,17 @@ https://accounts.google.com/displayunlockcaptcha
 INSTALLED_APPS = (
     # Django Apps
     'django.contrib.admin',
-    'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'django.contrib.sites',
+    'registration',
+    'django.contrib.auth',
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
     # Third Party Apps
     'crispy_forms',
+    # 'registration',
 
     # My Apps
     'newsletter',
@@ -130,4 +133,10 @@ STATICFILES_DIRS = (
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static_in_env', 'media_root')
 
+# CRISPY FORM TAGS SETTINGS
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
+# DJANGO REGISTRATION REDUX SETTINGS
+ACCOUNT_ACTIVATION_DAYS = 7
+REGISTRATION_AUTO_LOGIN = True
+
