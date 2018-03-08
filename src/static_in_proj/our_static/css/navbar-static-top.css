@@ -3,5 +3,15 @@ body {
 }
 
 .navbar-static-top {
+  background-color: #47439b;
+  border-color: #6d69cb;
   margin-bottom: 19px;
+}
+
+.navbar-default .navbar-brand {
+  color: #FFF;
+}
+
+.navbar-default .navbar-brand:hover {
+  color: #999;
 }

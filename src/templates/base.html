@@ -27,11 +27,11 @@
     {# verbatim #}
     {% include 'navbar.html' %}
     {# endverbatim #}
+
+    {% block jumbotron %}
+    {% endblock %}
     
     <div class="container">
-
-      {% block jumbotron %}
-      {% endblock %}
 
       {% block content %}
       {% endblock %}
